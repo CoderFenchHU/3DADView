@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_D轮播图" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JXH-BN-UlQ">
+                                <rect key="frame" x="0.0" y="451" width="375" height="216"/>
+                            </pickerView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="q1B-LE-hix">
+                                <rect key="frame" x="233" y="402" width="124" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="4Bw-hT-FH1"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderSwipe:" destination="BYZ-38-t0r" eventType="valueChanged" id="aFb-Y4-tvS"/>
+                                </connections>
+                            </slider>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="I5f-Xi-DdB">
+                                <rect key="frame" x="30" y="403" width="175" height="29"/>
+                                <segments>
+                                    <segment title="向左"/>
+                                    <segment title="向右"/>
+                                    <segment title="向上"/>
+                                    <segment title="向下"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentClick:" destination="BYZ-38-t0r" eventType="valueChanged" id="Kc4-WJ-hfF"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="JXH-BN-UlQ" secondAttribute="trailing" id="2oP-lC-RnR"/>
+                            <constraint firstItem="q1B-LE-hix" firstAttribute="leading" secondItem="I5f-Xi-DdB" secondAttribute="trailing" constant="30" id="PHN-O5-XQZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JXH-BN-UlQ" secondAttribute="trailing" id="REp-Lr-PIa"/>
+                            <constraint firstItem="JXH-BN-UlQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RbN-K5-rfI"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JXH-BN-UlQ" secondAttribute="bottom" id="TFO-Zm-DjB"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JXH-BN-UlQ" secondAttribute="bottom" id="VXf-Uq-LYv"/>
+                            <constraint firstItem="JXH-BN-UlQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="dVu-Iw-XdM"/>
+                            <constraint firstAttribute="trailing" secondItem="q1B-LE-hix" secondAttribute="trailing" constant="20" id="eCJ-zR-3Nu"/>
+                            <constraint firstItem="JXH-BN-UlQ" firstAttribute="top" secondItem="I5f-Xi-DdB" secondAttribute="bottom" constant="20" id="h3p-Kk-R43"/>
+                            <constraint firstItem="q1B-LE-hix" firstAttribute="centerY" secondItem="I5f-Xi-DdB" secondAttribute="centerY" id="w5g-Lj-d2v"/>
+                            <constraint firstItem="I5f-Xi-DdB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="wln-HC-Jwn"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="REp-Lr-PIa"/>
+                                <exclude reference="dVu-Iw-XdM"/>
+                                <exclude reference="VXf-Uq-LYv"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="pickView" destination="JXH-BN-UlQ" id="zqK-kP-sEe"/>
+                        <outlet property="segment" destination="I5f-Xi-DdB" id="Uac-Hl-h6J"/>
+                        <outlet property="slider" destination="q1B-LE-hix" id="QhK-ha-aLB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
