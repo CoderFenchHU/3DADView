@@ -10,4 +10,4 @@ iOS上一个实用的3D动画广告视图
   //        adView?.animationOptins = options
   // 直接加入控制器的视图即可
   self.view.addSubview(adView!)
-   ![image](https://github.com/CoderFenchHU/3DADView/raw/master/screenshots/yanshi.jpg)
+   ![image](https://github.com/CoderFenchHU/3DADView/raw/master/screenshots/yanshi.gif)
